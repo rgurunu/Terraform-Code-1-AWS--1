@@ -27,18 +27,18 @@ An OpenSSH key pair that will be used to control login access to EC2 instances.
 AWS access credentials must be supplied on the command line. This Terraform script was tested in my own AWS account with a user that has the AmazonEC2FullAccess and AmazonVPCFullAccess policies. It was also tested in the AWS account with a user that has the AdministratorAccess policy.
 
 # Files
-provider.tf - AWS Provider.
-alb.tf - Launches application load balancer for EC2 instances running httpd.
-vars.tf - Used by other files, sets default AWS region, AMIs, etc.
-vpc.tf - Launches VPC, subnets, route tables, Internet Gateway etc.
-autoscaling.tf - Create the auto scaling group and Create a new EC2 launch configuration
-autoscalingpolicy.tf - Create the auto scaling policy
-key.tf - Create a key pair that will be assigned to our instances
-securitygroup.tf - Create Security Group for instances and ALB Security Group for ALB
-install-httpd.sh - Contain Shell Script to install HTTPD service
-rout53.tf - Define a record set in Route 53 for the load balancer
-output.tf - Shows output of ALB
-datasource.tf - data source for our Route 53 hosted zone
+1. provider.tf - AWS Provider.
+2. alb.tf - Launches application load balancer for EC2 instances running httpd.
+3. vars.tf - Used by other files, sets default AWS region, AMIs, etc.
+4. vpc.tf - Launches VPC, subnets, route tables, Internet Gateway etc.
+5. autoscaling.tf - Create the auto scaling group and Create a new EC2 launch configuration
+6. autoscalingpolicy.tf - Create the auto scaling policy
+7. key.tf - Create a key pair that will be assigned to our instances
+8. securitygroup.tf - Create Security Group for instances and ALB Security Group for ALB
+9. install-httpd.sh - Contain Shell Script to install HTTPD service
+10. rout53.tf - Define a record set in Route 53 for the load balancer
+11. output.tf - Shows output of ALB
+12. datasource.tf - data source for our Route 53 hosted zone
 
 # Deployment
 
